@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// a := 4
 	// b :=   2
@@ -49,13 +47,30 @@ func main() {
 // 	fmt.Println("a는 3,4 다 아님")
 // }
 // fmt.Println("a의 값은",a)
-a:=5
-if a<10  && a >2{
-	fmt.Println("a는 10보다 작고 2보다 크다.")
-}else{
-	fmt.Println("a는 10보다 크거나 2보다 작다")
-}
-fmt.Println("a의 값은",a)
+
+
+// a:=5
+// if a<10  && a >2{
+// 	fmt.Println("a는 10보다 작고 2보다 크다.")
+// }else{
+// 	fmt.Println("a는 10보다 크거나 2보다 작다")
+// }
+// fmt.Println("a의 값은",a)
+
+// var i int
+// for {
+// 	if i ==5 {
+// 		i++
+// 		// break
+// 		continue
+// 	}
+// 	if i==6 {
+// 		break
+// 	}
+// 	fmt.Println(i)
+// 	i++
+
+// }
 
 
 }
