@@ -65,13 +65,36 @@ func main() {
 	// }
 
 	//별찍기 피라미드
-	for i := 0; i < 4; i++ {
+	// for i := 0; i < 4; i++ {
 
-		for j := 0; j < 3-i; j++ {
+	// 	for j := 0; j < 3-i; j++ {
+	// 		fmt.Print(" ")
+	// 	}
+	// 	for j:=0; j<2*i+1 ; j++{
+	// 		fmt.Print("*")
+	// 	}
+	// 	fmt.Println()
+	// }
+
+	//별찍기 역 피라미드
+	for i := 0; i < 3; i++ {
+
+		for j := 0; j < 2-i; j++ {
 			fmt.Print(" ")
 		}
 		for j:=0; j<2*i+1 ; j++{
 			fmt.Print("*")
+		}
+		fmt.Println()
+	}
+
+	for i:=0; i<2; i++ {
+		for j:=0; j<i+1; j++{
+			fmt.Print(" ")
+		}
+		for j:= 0; j<3-i*2;  j++{
+			fmt.Print("*")
+
 		}
 		fmt.Println()
 	}
