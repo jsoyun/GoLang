@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 
 	// //3X2빼고 구구단
@@ -42,8 +44,6 @@ func main() {
 	// 	fmt.Println()
 	// }
 
-
-
 	//별찍기 오른쪽 화살표같은삼각형
 
 	// for i:=0; i<3; i++{
@@ -51,18 +51,29 @@ func main() {
 	// 		fmt.Print("*")
 	// 	}
 	// 	fmt.Println()
-		
+
 	// }
 
 	// for i := 0; i<2 ; i++ {
 	// 	// fmt.Print("*")
 	// 	for j:=0; i+j<2; j++{
 	// 		fmt.Print("*")
-			
 
 	// 	}
 	// 	fmt.Println()
 
 	// }
+
+	//별찍기 피라미드
+	for i := 0; i < 4; i++ {
+
+		for j := 0; j < 3-i; j++ {
+			fmt.Print(" ")
+		}
+		for j:=0; j<2*i+1 ; j++{
+			fmt.Print("*")
+		}
+		fmt.Println()
+	}
 
 }
