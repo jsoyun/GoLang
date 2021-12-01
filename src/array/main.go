@@ -78,15 +78,38 @@ import "fmt"
 // }
 
 //방법2. 자리만 바꿔서 역순으로 만들기
- func main(){
-	 arr := [5] int {1,2,3,4,5}
-	 for i:=0; i<len(arr)/2; i++ {
+//  func main(){
+// 	 arr := [5] int {1,2,3,4,5}
+// 	 for i:=0; i<len(arr)/2; i++ {
 
-	//이중대입
-	arr[i], arr[len(arr)-1-i] = arr[len(arr)-1-i], arr[i]
+// 	//이중대입
+// 	arr[i], arr[len(arr)-1-i] = arr[len(arr)-1-i], arr[i]
 
-	 }
-	 fmt.Println(arr)
+// 	 }
+// 	 fmt.Println(arr)
+
+//  }
 
 
- }
+func main(){
+	arr := [11] int {0,5,4,9,1,2,3,8,3,6,4 }
+	temp := [10]int{}
+
+	for i := 0; i < len(arr); i++ {
+		idx := arr[i]
+		temp[idx]++
+	}
+//현재 인덱스 나타내는 idx
+idx := 0
+
+	for i:=0; i<len(temp); i++{
+		for j := 0; j <temp[i]; j++ {
+			arr[idx] = i
+			idx++
+
+		}
+	}
+	fmt.Println(arr)
+
+
+}
