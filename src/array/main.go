@@ -52,9 +52,9 @@
 
 //18강 배열 역순으로 순서 바꾸기
 //방법1. 임시배열에 순서 바꿔복사하고 원래 배열에 그걸 넣기
-package main
+// package main
 
-import "fmt"
+// import "fmt"
 
 // func main(){
 // 	arr := [5]int{1,2,3,4,5}
@@ -90,26 +90,92 @@ import "fmt"
 
 //  }
 
+// func main(){
+// 	arr := [11] int {0,5,4,9,1,2,3,8,3,6,4 }
+// 	temp := [10]int{}
 
-func main(){
-	arr := [11] int {0,5,4,9,1,2,3,8,3,6,4 }
-	temp := [10]int{}
+// 	for i := 0; i < len(arr); i++ {
+// 		idx := arr[i]
+// 		temp[idx]++
+// 	}
+// //현재 인덱스 나타내는 idx
+// idx := 0
 
-	for i := 0; i < len(arr); i++ {
-		idx := arr[i]
-		temp[idx]++
-	}
-//현재 인덱스 나타내는 idx
-idx := 0
+// 	for i:=0; i<len(temp); i++{
+// 		for j := 0; j <temp[i]; j++ {
+// 			arr[idx] = i
+// 			idx++
 
-	for i:=0; i<len(temp); i++{
-		for j := 0; j <temp[i]; j++ {
-			arr[idx] = i
-			idx++
+// 		}
+// 	}
+// 	fmt.Println(arr)
 
-		}
-	}
-	fmt.Println(arr)
+// }
 
+//19강
+
+// package main
+
+// import "fmt"
+
+// type Person struct {
+//   name string
+//   age int
+
+// }
+// //어떤 타입의 기능이냐 //p, 펄슨이 가지고 있는 기능 그 이름은 프린트 네임
+// //괄호안에 비었어 입력값은 없다
+// //펄슨에 메서드 ,기능 추가함
+// func (p Person) PrintName() {
+// 	fmt.Print(p.name)
+// }
+
+// func main() {
+// var p Person
+// p1 := Person{"개똥",15}
+// p2 := Person{name:"rk똥",age:20}
+// p3 := Person{name: "carson"}
+// p4 := Person{}
+
+// fmt.Println(p,p1,p2,p3,p4)
+
+// p.name = "sss"
+// p.age= 24
+
+// fmt.Println(p)
+
+// p.PrintName()
+// }
+
+package main
+
+import "fmt"
+
+type Student struct{
+	name string
+	class int
+
+	sungjuk Sungjuk
+}
+
+type Sungjuk struct {
+	name string
+	grade string
+}
+
+func (s Student) ViewSungJuk(){
+	fmt.Println(s.sungjuk)
+}
+
+func main() {
+
+	var s Student
+	s.name="철"
+	s.class = 1
+
+	s.sungjuk.name ="수학"
+	s.sungjuk.grade= "A"
+
+	s.ViewSungJuk()
 
 }
