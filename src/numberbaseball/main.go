@@ -72,7 +72,7 @@ func MakeNumbers()[3]int {
 			}
 		}
 	}
-	fmt.Println(rst)
+	// fmt.Println(rst)
 	return rst
 }
 func InputNumbers() [3]int {
@@ -143,7 +143,7 @@ func InputNumbers() [3]int {
 
 			}
 			rst[0],rst[2] = rst[2],rst[0]
-			fmt.Println(rst)
+			// fmt.Println(rst)
 			return rst
 
 }
