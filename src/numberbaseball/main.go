@@ -6,6 +6,10 @@ import (
 	"time"
 ) 
 
+type Result struct {
+	strikes int
+	balls int
+}
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
@@ -144,16 +148,30 @@ func InputNumbers() [3]int {
 
 }
 
-func CompareNumbers(numbers,inputNumbers [3] int) bool {
+func CompareNumbers(numbers,inputNumbers [3] int) Result {
 	//두개의 숫자 3개를 비교해서 결과를 반환한다
-	return true
+	strikes:=0
+	balls := 0
+	for i := 0; i<3; i++ {
+		for j:=0; j<3; j++ {
+			if numbers[i]==inputNumbers[j]{
+				if i== j {
+					strikes++
+				} else {
+					balls++
+				}
+				break
+			}
+	}
+	}
+	return Result{strikes,balls}
 }
 
-func PrintResult(result bool){
-	fmt.Println(result)
+func PrintResult(result Result){
+	fmt.Printf("%dS%dB\n", result.strikes,result.balls)
 }
 
-func IsGameEnd(result bool) bool {
+func IsGameEnd(result Result) bool {
 	//비교 결과가 3 스트라이크인지 확인
-	return result
+	return result.strikes ==3
 }
