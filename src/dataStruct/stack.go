@@ -5,7 +5,7 @@ type Stack struct {
 }
 
 func NewStack() *Stack {
-	return &Stack{11: &LinkedList{}}
+	return &Stack{ll: &LinkedList{}}
 }
 
 func (s *Stack) Push(val int) {
