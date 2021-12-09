@@ -2,6 +2,7 @@ package main
 
 import (
 	"dataStruct"
+	"fmt"
 )
 
 func main() {
@@ -9,17 +10,27 @@ func main() {
     val:=1
     tree.AddNode(val)
     val++
-
+    //1을 루트에 넣음
     for i := 0; i<3; i++{
         tree.Root.AddNode(val)
         val++
     }
-
+      //각 자식노드에 두개씩 더 추가
     for i :=0; i<len(tree.Root.Childs); i++{
-        
+        for j:=0; j<2; j++{
+            tree.Root.Childs[i].AddNode(val)
+            val++
+        }
+
     }
 
+tree.DFS1()
+fmt.Println()
 
+tree.DFS2()
+fmt.Println()
+
+tree.DFS3()
 //  stack := []int{}
 
 //  for i := 1; i <= 5; i++ {

@@ -20,6 +20,8 @@ type LinkedList struct {
 	Tail *Node
 }
 
+
+
 //2. 메서드 3개 추가함  add remove printNode
 //LinkedList가 가지고 있는기능, 메서드
 func (l *LinkedList) AddNode(val int) {
@@ -78,6 +80,28 @@ func  (l *LinkedList)  RemoveNode(node *Node ) {
 	}
 	node.Next= nil
 }
+
+
+func (l *LinkedList) Empty() bool {
+	return l.Root == nil
+   }
+
+
+   func (l *LinkedList) PopFront() {
+	if l.Root == nil {
+	 return
+	}
+	l.RemoveNode(l.Root)
+   }
+
+
+
+   func (l *LinkedList) Front() int {
+	if l.Root != nil {
+	 return l.Root.Val
+	}
+	return 0
+   }
 
 
 
