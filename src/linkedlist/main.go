@@ -31,6 +31,8 @@ tree.DFS2()
 fmt.Println()
 
 tree.DFS3()
+fmt.Println()
+tree.BFS()
 //  stack := []int{}
 
 //  for i := 1; i <= 5; i++ {
